@@ -1,12 +1,12 @@
-
+'use strict';
 
 const docsConfig = Object.assign({
     port: 9090
 }, getLocalConfig());
 
-function platformPath(path) {
-    return /^win/.test(os.platform()) ? `${path}.cmd` : path;
-}
+var rootDir = '.';
+var appDir = rootDir + '/src';
+var gulpDir = './gulp';
 
 var PATHS = {
     src: 'src/**/*.ts',
@@ -20,3 +20,7 @@ var PATHS = {
     demoApiDocs: 'demo/src',
     coverageJson: 'coverage/json/coverage-final.json'
 };
+
+function platformPath(path) {
+    return /^win/.test(os.platform()) ? `${path}.cmd` : path;
+}
