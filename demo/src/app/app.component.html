@@ -1,0 +1,30 @@
+<div class="container"
+     style="padding-left: 0; padding-right: 0;">
+  <header class="navbar navbar-light navbar-fixed-top navbar-toggleable-md">
+    <button aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="navbar-toggler navbar-toggler-right"
+            type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand">ng-mcpm</a>
+    <div class="navbar-collapse"
+         id="navbarContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link">Components</a>
+        </li>
+        <li class="nav-item hidden-lg-up">
+          <a class="nav-link">{{ component }}</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>
+<footer class="bd-footer text-muted">
+  <div class="container"></div>
+</footer>

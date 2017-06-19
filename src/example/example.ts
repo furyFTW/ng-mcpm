@@ -5,8 +5,11 @@ import { Component, Directive, } from '@angular/core';
     template: `
     <div>1</div>
     `
-})
 
+
+
+})
+;;; //
 export class NgmExample {
     constructor() {
     }
