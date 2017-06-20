@@ -70,7 +70,7 @@ module.exports = function makeWebpackConfig() {
         extensions: ['.ts', '.js', '.css', '.scss', '.html'],
 
         alias: {
-            '@ng-bootstrap/ng-bootstrap': root('src/index.ts')
+            '@ng-mcpm/ng-mcpm': root('src/index.ts')
         }
     };
 
@@ -197,7 +197,7 @@ module.exports = function makeWebpackConfig() {
             // Reference: https://github.com/angular/angular-cli/tree/master/packages/webpack
             new aotplugin.AotPlugin({
                 tsConfigPath: './tsconfig-aot.json',
-                entryModule: root('demo/src/app/') + 'app.module#NgbdModule'
+                entryModule: root('demo/src/app/') + 'app.module#NgmdModule'
             }),
 
             // Reference: http://webpack.github.io/docs/list-of-plugins.html#noerrorsplugin

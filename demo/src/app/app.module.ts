@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { NgbModule } from '@ng-mcpm/ng-mcpm';
+import { NgmModule } from '@ng-mcpm/ng-mcpm';
 
 import { DefaultComponent } from './default';
 // import {GettingStarted} from './getting-started';
@@ -18,7 +18,7 @@ import { NgmdSharedModule } from './shared';
   imports: [
     BrowserModule,
     routing,
-    NgbModule.forRoot(),
+    NgmModule.forRoot(),
     NgmdExampleModule,
     NgmdSharedModule
   ],

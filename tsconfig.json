@@ -13,7 +13,7 @@
         "sourceMap": true,
         "baseUrl": "./node_modules",
         "paths": {
-            "@ng-bootstrap/ng-bootstrap": [
+            "@ng-mcpm/ng-mcpm": [
                 "../src/index"
             ]
         },

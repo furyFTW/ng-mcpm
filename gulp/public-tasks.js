@@ -8,8 +8,13 @@ module.exports = (config) => {
     gulp.task('clean', ['clean:build', 'clean:tests', 'clean:demo', 'clean:demo-cache']);
 
     gulp.task('build', function (done) {
-        runSequence('lint', 'clean:build', 'ngc', 'umd', 'npm', done);
+        runSequence('lint', 'test', 'clean:build', 'ngc', 'umd', 'npm', done);
     });
+
+    gulp.task(
+        'demo-server', ['generate-docs', 'generate-plunks'],
+        shell.task([`webpack-dev-server --port ${docsConfig.port} --config webpack.demo.js --inline --progress`]));
+
 
     gulp.task(
         'deploy-demo',

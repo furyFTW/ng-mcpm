@@ -15,8 +15,6 @@ export class ExampleBoxComponent {
 
   toggleCode() {
     this.showCode = !this.showCode;
-    if (this.showCode) {
-      this._analytics.trackEvent('Demo code view', this.demoTitle);
-    }
+
   }
 }
