@@ -1,9 +1,11 @@
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import {
+    NgModule,
+    ModuleWithProviders
+} from '@angular/core';
 
 import { NgmExample } from './example';
 
 export { NgmExample } from './example';
-
 
 @NgModule({ declarations: [NgmExample], exports: [NgmExample] })
 export class NgmExampleModule {

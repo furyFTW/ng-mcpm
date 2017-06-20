@@ -3,13 +3,21 @@ let exec = require('child_process').exec;
 let del = require('del');
 let webpack = require('webpack');
 let gulpFile = require('gulp-file');
+var gutil = require('gulp-util');
+var path = require('path');
 
+function webpackCallBack(taskName, gulpDone) {
+  return function (err, stats) {
+    if (err) throw new gutil.PluginError(taskName, err);
+    gutil.log(`[${taskName}]`, stats.toString());
+    gulpDone();
+  }
+}
 
 module.exports = (config) => {
-
     gulp.task('ngc', (cb) => {
-        var executable = path.join(__dirname, config.platformPath('/node_modules/.bin/ngc'));
-        exec(`${executable} -p ${config.tsConfigES2015}`, (e) => {
+        var executable = path.join(__dirname.replace('gulp', ''), config.platformPath('/node_modules/.bin/ngc'));
+        exec(`${executable} -p ./tsconfig-es2015.json`, (e) => {
             if (e) console.log(e);
             del('./dist/waste');
             cb();

@@ -1,9 +1,9 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 
-//Import section
-import { NgmExampleModule } from "./example/example.module";
+// Import section
+import { NgmExampleModule } from './example/example.module';
 
-//export section
+// export section
 export { NgmExampleModule } from './example/example.module';
 
 const NGM_MODULES = [
@@ -14,12 +14,18 @@ const NGM_MODULES = [
     imports: [
         NgmExampleModule.forRoot()
     ],
-    exports: NGM_MODULES
+    exports: NGM_MODULES,
 })
 
-export class NgmRootModule { }
+export class NgmRootModule {
+
+}
 
 @NgModule({ imports: NGM_MODULES, exports: NGM_MODULES })
 export class NgmModule {
-    static forRoot(): ModuleWithProviders { return { ngModule: NgmRootModule }; }
+    static forRoot(): ModuleWithProviders {
+        return {
+            ngModule: NgmRootModule
+        };
+    }
 }

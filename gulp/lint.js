@@ -6,9 +6,7 @@ var tslint = require('gulp-tslint');
 
 module.exports = (config) => {
     gulp.task('lint', function () {
-
-        console.log(__dirname + config.PATHS.src);
-        return gulp.src([config.PATHS.src, config.PATHS.demo, '!demo/src/api-docs.ts'])
+        return gulp.src([config.PATHS.src, config.PATHS.demo, '!demo/src/app/api-docs.ts'])
             .pipe(tslint({
                 configuration: require('../tslint.json'),
                 formatter: 'prose'
