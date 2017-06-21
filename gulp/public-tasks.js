@@ -1,7 +1,7 @@
 'use strict';
 let gulp = require('gulp');
 let runSequence = require('run-sequence');
-
+let shell = require('gulp-shell');
 
 module.exports = (config) => {
 
@@ -13,7 +13,7 @@ module.exports = (config) => {
 
     gulp.task(
         'demo-server', ['generate-docs', 'generate-plunks'],
-        shell.task([`webpack-dev-server --port ${docsConfig.port} --config webpack.demo.js --inline --progress`]));
+        shell.task([`webpack-dev-server --port ${config.docsConfig.port} --config webpack.demo.js --inline --progress`]));
 
 
     gulp.task(
