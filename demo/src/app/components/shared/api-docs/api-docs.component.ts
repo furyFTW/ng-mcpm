@@ -11,7 +11,7 @@ import { PropertyDesc, DirectiveDesc, InputDesc, MethodDesc, ClassDesc, signatur
  * The config service of a directive NgbFoo is, by convention, named NgbFooConfig.
  */
 @Component({
-  selector: 'ngbd-api-docs',
+  selector: 'ngmd-api-docs',
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './api-docs.component.html',
   styles: [`
@@ -24,7 +24,7 @@ import { PropertyDesc, DirectiveDesc, InputDesc, MethodDesc, ClassDesc, signatur
     `
   ]
 })
-export class NgbdApiDocs {
+export class NgmdApiDocs {
 
   /**
    * Object which contains, for each input name of the directive, the corresponding property of the associated config

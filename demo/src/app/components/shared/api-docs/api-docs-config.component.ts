@@ -16,7 +16,7 @@ const CONFIG_SUFFIX_LENGTH = 'Config'.length;
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './api-docs-config.component.html'
 })
-export class NgbdApiDocsConfig {
+export class NgmdApiDocsConfig {
   apiDocs: ClassDesc;
   directiveName: string;
 

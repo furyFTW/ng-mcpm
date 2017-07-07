@@ -3,13 +3,13 @@ import { Component, Directive, } from '@angular/core';
 @Component({
     selector: 'ngm-example',
     template: `
-    <div>2121212</div>
+    <div>12</div>
     `
 })
 export class NgmExample {
     constructor() { }
 }
-export interface NgbModalOptions {
+export interface NgmModalOptions {
     /**
      * Whether a backdrop element should be created for a given modal (true by default).
      * Alternatively, specify 'static' for a backdrop which doesn't close the modal on click.

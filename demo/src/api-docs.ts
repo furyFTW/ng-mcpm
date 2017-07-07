@@ -9,9 +9,9 @@ const API_DOCS = {
     "properties": [],
     "methods": []
   },
-  "NgbModalOptions": {
+  "NgmModalOptions": {
     "fileName": "src/example/example.ts",
-    "className": "NgbModalOptions",
+    "className": "NgmModalOptions",
     "description": "",
     "methods": [],
     "properties": [

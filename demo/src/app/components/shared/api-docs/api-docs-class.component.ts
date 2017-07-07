@@ -8,7 +8,7 @@ import { ClassDesc, MethodDesc, signature } from './api-docs.model';
  * For Config services, use NgbdApiDocsConfig instead.
  */
 @Component({
-  selector: 'ngbd-api-docs-class',
+  selector: 'ngmd-api-docs-class',
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './api-docs-class.component.html',
   styles: [`
@@ -21,7 +21,7 @@ import { ClassDesc, MethodDesc, signature } from './api-docs.model';
     `
   ]
 })
-export class NgbdApiDocsClass {
+export class NgmdApiDocsClass {
   apiDocs: ClassDesc;
 
   constructor() { }

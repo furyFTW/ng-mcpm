@@ -12,7 +12,7 @@ module.exports = (config) => {
     });
 
     gulp.task(
-        'demo-server', ['generate-docs', 'generate-plunks'],
+        'demo-server', ['generate-docs'],
         shell.task([`webpack-dev-server --port ${config.docsConfig.port} --config webpack.demo.js --inline --progress`]));
 
 
