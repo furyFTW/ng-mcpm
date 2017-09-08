@@ -3,20 +3,20 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { JsonpModule } from '@angular/http';
-
+import { NgbTabsetModule } from '@ng-bootstrap/ng-bootstrap/tabset/tabset.module';
 import { NgmModule } from '@ng-mcpm/ng-mcpm';
 
-import { ContentWrapper } from './content-wrapper/content-wrapper.component';
+import { ComponentWrapper } from './component-wrapper/component-wrapper.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 
 export { componentsList } from './side-nav/side-nav.component';
 
 @NgModule({
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, NgbTabsetModule],
   exports: [
     CommonModule,
     RouterModule,
-    ContentWrapper,
+    ComponentWrapper,
     SideNavComponent,
     NgmModule,
     FormsModule,
@@ -24,7 +24,7 @@ export { componentsList } from './side-nav/side-nav.component';
     JsonpModule
   ],
   declarations: [
-    ContentWrapper,
+    ComponentWrapper,
     SideNavComponent,
   ]
 })

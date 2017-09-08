@@ -12,7 +12,8 @@
   "dependencies": {
     "@angular/common": "4.0.3",
     "@angular/core": "4.0.3",
-    "@angular/forms": "4.0.3"
+    "@angular/forms": "4.0.3",
+    "@ng-bootstrap/ng-bootstrap": "^1.0.0-beta.3"
   },
   "devDependencies": {
     "@angular/compiler": "4.0.3",
@@ -27,7 +28,7 @@
     "angular2-template-loader": "^0.6.0",
     "async-done": "^1.2.2",
     "autoprefixer": "^6.5.1",
-    "bootstrap": "4.0.0-alpha.6",
+    "bootstrap": "4.0.0-beta",
     "clang-format": "1.0.35",
     "copy-webpack-plugin": "^4.0.0",
     "core-js": "^2.4.1",
@@ -67,6 +68,7 @@
     "raw-loader": "^0.5.1",
     "reflect-metadata": "^0.1.8",
     "remap-istanbul": "^0.7.0",
+    "require-dir": "^0.3.2",
     "run-sequence": "^1.2.2",
     "rxjs": "^5.0.1",
     "sass-loader": "^4.0.2",

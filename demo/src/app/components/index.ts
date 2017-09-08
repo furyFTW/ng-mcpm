@@ -9,7 +9,7 @@ import { NgmdExampleModule } from './example';
 
 @NgModule({
     imports: [
-        NgmdExampleModule
+        NgmdExampleModule,
     ],
     exports: [
         NgmdExampleModule

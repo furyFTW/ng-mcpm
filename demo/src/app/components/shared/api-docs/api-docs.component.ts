@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
-import docs from '../../../api-docs';
+import docs from '../../../../api-docs';
 import { PropertyDesc, DirectiveDesc, InputDesc, MethodDesc, ClassDesc, signature } from './api-docs.model';
 
 /**
@@ -42,6 +42,7 @@ export class NgmdApiDocs {
     this.configServiceName = `${directiveName}Config`;
     const configApiDocs = docs[this.configServiceName];
     this._configProperties = {};
+    console.log(configApiDocs);
     if (configApiDocs) {
       this.apiDocs.inputs.forEach(
         input => this._configProperties[input.name] = this._findInputConfigProperty(configApiDocs, input));

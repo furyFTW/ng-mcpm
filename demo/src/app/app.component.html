@@ -1,17 +1,18 @@
 <div class="container" style="padding-left: 0; padding-right: 0;">
-  <header class="navbar navbar-light navbar-fixed-top navbar-toggleable-md">
-    <button aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"
-      type="button">
+<header class="navbar navbar-light navbar-fixed-top navbar-expand-lg">
+    <a class="navbar-brand" [routerLink]="['/']" (click)="navbarCollapsed = true">ng-bootstrap</a>
+
+    <button class="navbar-toggler navbar-toggler-right" type="button" (click)="navbarCollapsed = !navbarCollapsed" [attr.aria-expanded]="!navbarCollapsed"
+      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand">ng-mcpm</a>
-    <div class="navbar-collapse" id="navbarContent">
+    <div class="navbar-collapse" [ngbCollapse]="navbarCollapsed" id="navbarContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item" [routerLinkActive]="['active']">
           <a class="nav-link" [routerLink]="['/components']" (click)="navbarCollapsed = true">Components</a>
         </li>
-        <li class="nav-item hidden-lg-up">
-          <a class="nav-link">{{ component }}</a>
+        <li class="nav-item d-lg-none" *ngFor="let component of components" [routerLinkActive]="['active']">
+          <a class="nav-link" [routerLink]="['/components', component.toLowerCase()]" (click)="navbarCollapsed = true">{{ component }}</a>
         </li>
       </ul>
     </div>
