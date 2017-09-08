@@ -22,7 +22,6 @@ export class ComponentWrapper {
 
   constructor(private route: ActivatedRoute, private router: Router) {
     this.route.params.subscribe(params => {
-      console.log(this.activeTab);
       const tab = params['tab'];
       if (VALID_TABS.indexOf(tab) !== -1) {
         this.activeTab = tab;
@@ -30,7 +29,6 @@ export class ComponentWrapper {
         this.router.navigate(['..', DEFAULT_TAB], {relativeTo: this.route});
       }
       document.body.scrollIntoView();
-      console.log(this.activeTab); 
     });
   }
 

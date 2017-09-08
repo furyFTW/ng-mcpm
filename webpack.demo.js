@@ -215,7 +215,7 @@ module.exports = function makeWebpackConfig() {
             // Copy assets from the public folder
             // Reference: https://github.com/kevlened/copy-webpack-plugin
             new CopyWebpackPlugin([{
-                from: root('demo/src')
+                from: root('demo/src/public')
             }])
         );
     }
@@ -226,7 +226,7 @@ module.exports = function makeWebpackConfig() {
      * Reference: http://webpack.github.io/docs/webpack-dev-server.html
      */
     config.devServer = {
-        contentBase: 'demo/src',
+        contentBase: 'demo/src/public',
         historyApiFallback: true,
         stats: 'minimal' // none (or false), errors-only, minimal, normal (or true) and verbose
     };
