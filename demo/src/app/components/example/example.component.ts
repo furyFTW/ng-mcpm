@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { DEMO_SNIPPETS } from './demos';
-console.log(DEMO_SNIPPETS);
 @Component({
   selector: 'ngmd-example',
   template: `

@@ -2,43 +2,50 @@ const API_DOCS = {
   "NgmExample": {
     "fileName": "src/example/example.ts",
     "className": "NgmExample",
-    "description": "",
+    "description": "Whether a backdrop element should be created for a given modal (true by default).\r\nAlternatively, specify 'static' for a backdrop which doesn't close the modal on click.",
+    "type": "Component",
     "selector": "ngm-example",
-    "inputs": [],
+    "exportAs": "NgmExample",
+    "inputs": [
+      {
+        "name": "activeIds",
+        "type": "string | string[]",
+        "description": "An array or comma separated strings of panel identifiers that should be opened"
+      }
+    ],
     "outputs": [],
     "properties": [],
-    "methods": []
+    "methods": [
+      {
+        "name": "toggle",
+        "description": "Programmatically toggle a panel with a given id.",
+        "args": [
+          {
+            "name": "panelId",
+            "type": "string"
+          }
+        ],
+        "returnType": "void"
+      }
+    ]
   },
-  "NgmModalOptions": {
+  "NgmExampleConfig": {
     "fileName": "src/example/example.ts",
-    "className": "NgmModalOptions",
-    "description": "",
+    "className": "NgmExampleConfig",
+    "description": "Configuration service for the NgbAccordion component.\r\nYou can inject this service, typically in your root component, and customize the values of its properties in\r\norder to provide default values for all the accordions used in the application.",
+    "type": "Service",
     "methods": [],
     "properties": [
       {
-        "name": "backdrop",
-        "type": "boolean | \"static\"",
-        "description": "Whether a backdrop element should be created for a given modal (true by default).\r\nAlternatively, specify 'static' for a backdrop which doesn't close the modal on click."
-      },
-      {
-        "name": "container",
-        "type": "string",
-        "description": "An element to which to attach newly opened modal windows."
-      },
-      {
-        "name": "keyboard",
+        "name": "closeOthers",
+        "defaultValue": "false",
         "type": "boolean",
-        "description": "Whether to close the modal when escape key is pressed (true by default)."
+        "description": ""
       },
       {
-        "name": "size",
-        "type": "\"sm\" | \"lg\"",
-        "description": "Size of a new modal window."
-      },
-      {
-        "name": "windowClass",
+        "name": "type",
         "type": "string",
-        "description": "Custom class to append to the modal window"
+        "description": ""
       }
     ]
   }

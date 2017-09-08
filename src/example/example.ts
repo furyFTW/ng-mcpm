@@ -1,38 +1,37 @@
-import { Component, Directive, } from '@angular/core';
-
+import { Component, Directive, Input } from '@angular/core';
+import { Injectable } from '@angular/core';
+/**
+   * Whether a backdrop element should be created for a given modal (true by default).
+   * Alternatively, specify 'static' for a backdrop which doesn't close the modal on click.
+   */
 @Component({
     selector: 'ngm-example',
+    exportAs: 'NgmExample',
     template: `
     <div>1</div>
     `
 })
 export class NgmExample {
     constructor() { }
+    /**
+   * An array or comma separated strings of panel identifiers that should be opened
+   */
+    @Input() activeIds: string | string[] = [];
+    /**
+     * Programmatically toggle a panel with a given id.
+    */
+    toggle(panelId: string) {
+
+    }
 }
-export interface NgmModalOptions {
-    /**
-     * Whether a backdrop element should be created for a given modal (true by default).
-     * Alternatively, specify 'static' for a backdrop which doesn't close the modal on click.
-     */
-    backdrop?: boolean | 'static';
 
-    /**
-     * An element to which to attach newly opened modal windows.
-     */
-    container?: string;
-
-    /**
-     * Whether to close the modal when escape key is pressed (true by default).
-     */
-    keyboard?: boolean;
-
-    /**
-     * Size of a new modal window.
-     */
-    size?: 'sm' | 'lg';
-
-    /**
-     * Custom class to append to the modal window
-     */
-    windowClass?: string;
+/**
+ * Configuration service for the NgbAccordion component.
+ * You can inject this service, typically in your root component, and customize the values of its properties in
+ * order to provide default values for all the accordions used in the application.
+ */
+@Injectable()
+export class NgmExampleConfig {
+    closeOthers = false;
+    type: string;
 }

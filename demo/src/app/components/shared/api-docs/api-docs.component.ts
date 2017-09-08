@@ -42,7 +42,6 @@ export class NgmdApiDocs {
     this.configServiceName = `${directiveName}Config`;
     const configApiDocs = docs[this.configServiceName];
     this._configProperties = {};
-    console.log(configApiDocs);
     if (configApiDocs) {
       this.apiDocs.inputs.forEach(
         input => this._configProperties[input.name] = this._findInputConfigProperty(configApiDocs, input));
