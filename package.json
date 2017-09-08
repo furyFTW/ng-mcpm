@@ -8,6 +8,10 @@
   "bugs": {
     "url": "https://github.com/furyFTW/ng-mcpm/issues"
   },
+  "scripts": {
+    "demo-server":"gulp demo-server",
+    "gen-demo" : "node misc/demo-gen.js"
+  },
   "homepage": "https://github.com/furyFTW/ng-mcpm#readme",
   "dependencies": {
     "@angular/common": "4.0.3",

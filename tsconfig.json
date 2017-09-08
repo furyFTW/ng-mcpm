@@ -16,13 +16,15 @@
             "@ng-mcpm/ng-mcpm": [
                 "../src/index"
             ]
+            
         },
         "typeRoots": [
             "node_modules/@types"
         ]
     },
     "include": [
-        "src/**/*.ts"
+        "src/**/*.ts",
+        "demo/**/*.ts"
     ],
     "compileOnSave": false
 }

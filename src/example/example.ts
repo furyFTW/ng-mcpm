@@ -1,4 +1,4 @@
-import { Component, Directive, Input } from '@angular/core';
+import { Component, Directive, Input,OnInit } from '@angular/core';
 import { Injectable } from '@angular/core';
 /**
    * Whether a backdrop element should be created for a given modal (true by default).
@@ -8,18 +8,24 @@ import { Injectable } from '@angular/core';
     selector: 'ngm-example',
     exportAs: 'NgmExample',
     template: `
-    <div>1</div>
+    <div>{{label}}</div>
     `
 })
-export class NgmExample {
-    constructor() { }
+export class NgmExample implements OnInit{
+    
     /**
    * An array or comma separated strings of panel identifiers that should be opened
    */
-    @Input() activeIds: string | string[] = [];
+    @Input() label: string;
     /**
      * Programmatically toggle a panel with a given id.
     */
+    constructor() { }
+
+    ngOnInit() {
+        console.log(name);
+    }
+
     toggle(panelId: string) {
 
     }

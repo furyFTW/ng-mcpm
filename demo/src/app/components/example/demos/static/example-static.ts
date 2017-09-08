@@ -5,4 +5,5 @@ import { Component } from '@angular/core';
     templateUrl: './example-static.html'
 })
 export class NgmdExampleStatic {
+    public label = 'dasdasd';
 }

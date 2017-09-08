@@ -6,7 +6,7 @@ import { DEMO_SNIPPETS } from './demos';
   <ngmd-component-wrapper component="Example">
       <ngmd-api-docs directive="NgmExample"></ngmd-api-docs>
       <ngmd-example-box demoTitle="Example" [snippets]="snippets" component="example" demo="static">
-      <ngm-example></ngm-example>
+      <ngmd-example-static></ngmd-example-static>
     </ngmd-example-box>
   </ngmd-component-wrapper>
   `
